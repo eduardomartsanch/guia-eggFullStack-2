@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!--2. Conocido el número en matemática PI π, pedir al usuario que ingrese el valor del radio
+de una circunferencia y calcular y mostrar por pantalla el área y perímetro. Recuerde que
+para calcular el área y el perímetro se utilizan las siguientes fórmulas:
+area = PI * radio2
+perimetro = 2 * PI * radio-->
+
+    <h1>Area del circulo</h1>
+    <script>
+  var radio = parseFloat(prompt("Ingresa el valor del radio"));   //parseFloat te permite usar numeros decimales.
+  var pi = Math.PI;   
+  /*Una forma de obtener el cuadrado del radio es con la funcion Math.pow
+  Dentro de los parentesis de Math.pow Agregas dos parametros: Por ejemplo si quieres obtener 
+  el cuadrado de un radio: Math.pow(radio,2) si quieres obtener el cubo del 
+  radio Math.pow(radio,3)*/
+  var area = pi * Math.pow(radio, 2);
+  alert("El area del circulo es "+ area);
+    </script>
+</body>
+</html>

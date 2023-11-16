@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Sentencia while</h1>
+<script>
+    let limit;
+
+do {
+    limit = parseInt(prompt("Ingrese un valor límite positivo"));
+
+    if (isNaN(limit)) {
+        console.log("El valor ingresado no es un número.");
+    } else if (limit <= 0) {
+        console.log("El valor ingresado debe ser positivo.");
+    }
+} while (isNaN(limit) || limit <= 0);
+
+let suma = 0;
+let contador = 0;
+
+// Solicitar números al usuario hasta que la suma supere el límite
+do {
+    let num = parseFloat(prompt(`Ingresa el número ${contador + 1}:`));
+
+    if (isNaN(num)) {
+        console.log("El valor ingresado no es un número.");
+    } else {
+        suma += num;
+        contador++;
+    }
+} while (suma <= limit);
+
+console.log(`La suma de los números introducidos superó el límite (${limit}) después de ingresar ${contador} números.`);
+
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Clase libro</h1>
+    <script>
+var libro = {
+  ISBN: "",
+  titulo: "",
+  autor: "",
+  numPaginas: 0,
+  cargarLibro: function() {
+    this.ISBN = prompt("Ingrese el ISBN del libro:");
+    this.titulo = prompt("Ingrese el título del libro:");
+    this.autor = prompt("Ingrese el autor del libro:");
+    this.numPaginas = parseInt(prompt("Ingrese el número de páginas del libro:"));
+  },
+  informacionLibro: function() {
+    console.log("ISBN:", this.ISBN);
+    console.log("Título:", this.titulo);
+    console.log("Autor:", this.autor);
+    console.log("Número de Páginas:", this.numPaginas);
+  }
+};
+
+libro.cargarLibro();
+libro.informacionLibro();
+
+    </script>
+</body>
+</html>

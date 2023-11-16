@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body>
+
+        <h1> Ingresa S o N en Javascript</h1>
+        <script>
+     /*4. Realiza un programa que sólo permita introducir los caracteres ‘S’ y ‘N’. Si el usuario
+          ingresa alguno de esos dos caracteres se deberá de imprimir un mensaje por pantalla
+          que diga “CORRECTO”, en caso contrario, se deberá imprimir “INCORRECTO”.*/
+
+          var IngresaSoN = prompt("Ingresa una letra(S o N)");
+          
+          if (IngresaSoN.toUpperCase() === 'S' || IngresaSoN.toUpperCase() === 'N') {
+            alert("Ingresaste la letra: "+ IngresaSoN +" CORRECTO");
+          } else {
+            alert("Ingresaste la letra: "+ IngresaSoN +" INCORRECTO");
+          }
+        </script>
+    </body>
+</html>

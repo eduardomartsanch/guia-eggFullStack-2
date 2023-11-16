@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+</head>
+<body>
+    <!--12. Escribir una función flecha de JavaScript que reciba un argumento y retorne el tipo de
+dato.-->
+    <h1>convertir un argumeto a dato</h1>
+    <script>
+    const obtenerTipoDeDato = (dato) => {
+  if (typeof dato === "boolean") {
+    return `Dato ingresado: ${dato}, Tipo de dato: booleano (puede ser ${dato ? "true" : "false"}).`;
+  }
+  return `Dato ingresado: ${dato}, Tipo de dato: ${typeof dato}`;
+};
+
+let continuar = true;
+
+while (continuar) {
+  const seleccion = prompt("Selecciona el número correspondiente al tipo de dato que deseas obtener:\n1. Número\n2. Cadena de texto\n3. Booleano (true o false)\n4. Objeto JSON\n5. Salir");
+
+  switch (seleccion) {
+    case "1":
+      const numero = parseFloat(prompt("Ingresa un número:"));
+      const resultadoNumero = obtenerTipoDeDato(numero);
+      console.log(resultadoNumero);
+      break;
+
+    case "2":
+      const cadena = prompt("Ingresa una cadena de texto:");
+      const resultadoCadena = obtenerTipoDeDato(cadena);
+      console.log(resultadoCadena);
+      break;
+
+    case "3":
+      const booleano = prompt("Ingresa un booleano (true o false):").toLowerCase() === "true";
+      const resultadoBooleano = obtenerTipoDeDato(booleano);
+      console.log(resultadoBooleano);
+      break;
+
+    case "4":
+      const objeto = prompt("Ingresa un objeto JSON válido (por ejemplo, {'clave': 'valor'}):");
+      try {
+        const resultadoObjeto = obtenerTipoDeDato(JSON.parse(objeto));
+        console.log(resultadoObjeto);
+      } catch (error) {
+        console.log("Error al analizar el objeto JSON.");
+      }
+      break;
+
+    case "5":
+      continuar = false;
+      console.log("El programa se ha terminado. ¡Adiós!");
+      break;
+
+    default:
+      console.log("Selección inválida");
+      const intentarNuevamente = prompt("¿Desea intentarlo de nuevo? (si / no)").toLowerCase();
+      if (intentarNuevamente !== "si") {
+        continuar = false;
+        console.log("El programa se ha terminado. ¡Adiós!");
+      }
+      break;
+      
+  }
+}
+
+
+    </script>
+    
+</body>
+</html>

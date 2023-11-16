@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--15. Escribe un programa JavaScript para calcular el área y el perímetro de un objeto Círculo
+con la propiedad radio. Nota: Cree dos métodos para calcular el área y el perímetro. El
+radio del círculo lo proporcionará el usuario.-->
+    <h1>Circunferencia de un circulo</h1>
+    <script>
+
+var circulo = {
+  radio: 0,
+  calcularArea: function() {
+    return Math.PI * this.radio * this.radio;
+  },
+  calcularPerimetro: function() {
+    return 2 * Math.PI * this.radio;
+  }
+};
+
+circulo.radio = parseFloat(prompt("Ingrese el radio del círculo:"));
+console.log("Área del círculo:", circulo.calcularArea());
+console.log("Perímetro del círculo:", circulo.calcularPerimetro());
+    </script>
+</body>
+
+</html>
